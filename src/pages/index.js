@@ -20,8 +20,6 @@ const IndexPage = () => {
   const isSSR = typeof window === "undefined";
   const [mode] = useQueryParam("mode", StringParam);
 
-  console.log({ mode }, 123123);
-
   if (isSSR) return null;
 
   return (
