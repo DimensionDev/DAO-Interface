@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdao_interface=self.webpackChunkdao_interface||[]).push([[678],{7704:function(e,t,n){n.r(t);var a=n(7294);t.default=function(){return a.createElement("main",null,a.createElement("p",{className:"font-bold text-blue-500"},"123"))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-747ab1f110f48b26ddec.js.map
