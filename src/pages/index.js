@@ -20,9 +20,28 @@ const IndexPage = () => {
   const isSSR = typeof window === "undefined";
   const [mode] = useQueryParam("mode", StringParam);
   const [userId] = useQueryParam("userId", StringParam);
-  console.log({ userId });
-  if (isSSR) return null;
+  const [payload, setPayload] = React.useState(null);
 
+  React.useEffect(() => {
+    async function fetchPayload() {
+      const api = `https://dimensiondev.github.io/Maskbook-Configuration/com.maskbook.dao-${userId.toLowerCase()}.json`;
+      try {
+        const res = await fetch(api);
+        if (!res.ok) {
+          setPayload(null);
+        }
+        const r = await res.json();
+        setPayload(r);
+      } catch {
+        setPayload(null);
+      }
+    }
+
+    fetchPayload();
+  }, [userId]);
+
+  if (isSSR || !userId || !payload) return null;
+  console.log({ payload });
   return (
     <>
       <Helmet>
@@ -33,7 +52,7 @@ const IndexPage = () => {
           <img
             alt=""
             className="rounded w-20 h-20 mr-4"
-            src="https://avatars.githubusercontent.com/u/63733714?v=4"
+            src={payload.logoUri}
           />
           <div className="-translate-y-3 transform">
             <p
