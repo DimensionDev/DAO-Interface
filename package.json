@@ -8,6 +8,8 @@
     "gatsby"
   ],
   "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy:build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -18,12 +20,12 @@
     "gatsby": "3.13.1",
     "react": "^17.0.1",
     "@mui/material": "^5.0.2",
-    "autoprefixer": "^10.4.0",    
+    "autoprefixer": "^10.4.0",
     "react-dom": "^17.0.1",
     "gatsby-plugin-postcss": "^4.14.0",
     "gh-pages": "^3.2.3",
-    "postcss": "^8.3.8",    
+    "postcss": "^8.3.8",
     "tailwindcss": "^2.2.19",
-    "gatsby-plugin-use-query-params": "^1.0.1"    
+    "gatsby-plugin-use-query-params": "^1.0.1"
   }
 }
