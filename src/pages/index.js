@@ -141,6 +141,7 @@ const IndexPage = () => {
           </p>
         </div>
       </div>
+      <script src="https://raw.githubusercontent.com/davidjbradshaw/iframe-resizer/master/js/iframeResizer.min.js" defer />
     </main>
   );
 };
