@@ -26,7 +26,7 @@ const IndexPage = () => {
   return (
     <>
       <Helmet>
-        <script src="/iframeResizer.contentWindow.min.js" />
+        <script src="https://dimensiondev.github.io/DAO-Interface/iframeResizer.contentWindow.min.js" />
       </Helmet>
       <main className="mx-8 py-2">
         <div className="flex overflow-visible mb-4">
