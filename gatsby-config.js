@@ -5,6 +5,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-use-query-params",
+    "gatsby-plugin-react-helmet",
   ],
   pathPrefix: "/DAO-Interface",
 };
