@@ -145,8 +145,15 @@ export function Header(props) {
             />
           </p>
           <p className={`${mode === "dark" ? "text-gray-100" : ""}`}>
-            {formatCurrency(Math.ceil(formatBalance(payload.jbx, 18)), 2)} JBX +
-            Ξ{formatCurrency(Math.ceil(formatBalance(payload.inWallet, 18)), 2)}
+            {formatCurrency(
+              Math.ceil(formatBalance(payload.inWallet.jbx, 18)),
+              2
+            )}{" "}
+            JBX + Ξ
+            {formatCurrency(
+              Math.ceil(formatBalance(payload.inWallet.eth, 18)),
+              2
+            )}
           </p>
           <p
             className={`${
