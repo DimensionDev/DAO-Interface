@@ -45,10 +45,10 @@ export function MainTabs(props) {
       </Box>
       <TabPanel value={value} index={0}>
         <p className={`${valueTextColor} flex items-center mb-2`}>
-          <span>{payload.fundingCycles[0].toETHSymbol}</span>
+          <span>{payload.holdingSymbol}</span>
           <Tip
             mode={mode}
-            title={`${payload.fundingCycles[0].toETHSymbol} ERC20 are distributed to anyone who pays this project. If the project has set a funding target, tokens can be redeemed for a portion of the project's overflow whether or not they have been claimed yet.`}
+            title={`${payload.holdingSymbol} ERC20 are distributed to anyone who pays this project. If the project has set a funding target, tokens can be redeemed for a portion of the project's overflow whether or not they have been claimed yet.`}
           />
         </p>
         <div className="flex justify-between font-normal mb-2">
