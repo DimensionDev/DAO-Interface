@@ -38,7 +38,11 @@ export function Header(props) {
           >
             {payload.name}
           </p>
-          <p className={`text-base ${mode === "dark" ? "text-gray-500" : ""}`}>
+          <p
+            className={`text-base break-words max-w-md ${
+              mode === "dark" ? "text-gray-500" : ""
+            }`}
+          >
             {payload.description}
           </p>
         </div>
@@ -149,11 +153,7 @@ export function Header(props) {
               Math.ceil(formatBalance(payload.inWallet.jbx, 18)),
               2
             )}{" "}
-            JBX + Ξ
-            {formatCurrency(
-              Math.ceil(formatBalance(payload.inWallet.eth, 18)),
-              2
-            )}
+            JBX + Ξ{formatBalance(payload.inWallet.eth, 18)}
           </p>
           <p
             className={`${

@@ -69,7 +69,9 @@ export function MainTabs(props) {
         </div>
         <div className="flex justify-between mb-2">
           <p className={keyTextColor}>Total supply:</p>
-          <p className={valueTextColor}>5,156,822,294</p>
+          <p className={valueTextColor}>
+            {formatCurrency(payload.totalSupply, 0)}
+          </p>
         </div>
         {/* <div className="flex justify-between mb-2">
           <p className={keyTextColor}>Your balance:</p>
@@ -97,13 +99,7 @@ export function MainTabs(props) {
               <p className="w-2/4 mt-3">
                 <span className={keyTextColor}>Target: </span>
                 <span className={valueTextColor}>
-                  Ξ
-                  {formatCurrency(
-                    Math.ceil(
-                      formatBalance(payload.fundingCycles[0].target, 18)
-                    ),
-                    0
-                  )}
+                  Ξ{formatBalance(payload.fundingCycles[0].target, 18)}
                 </span>
               </p>
               <p className="w-2/4 mt-3">
