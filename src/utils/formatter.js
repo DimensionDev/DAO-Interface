@@ -23,17 +23,13 @@ export function pow10(n, m) {
   return new BigNumber(10).pow(n, m);
 }
 
-export function formatCurrency(value, precision = 2, sign = "") {
+export function formatCurrency(value, sign = "") {
   if (value === "0" || !value) return "0";
   const balance = new BigNumber(value);
   const fixedBalance = balance.gt(1)
-    ? balance.toFixed(precision)
-    : balance.toPrecision(precision);
-  return `${sign}${
-    precision === 0
-      ? fixedBalance.replace(/\B(?=(\d{3})+(?!\d))/g, "$&,")
-      : fixedBalance.replace(/\d(?=(\d{3})+\.)/g, "$&,")
-  }`;
+    ? balance.toFixed(2)
+    : balance.toPrecision(2);
+  return `${sign}${fixedBalance.replace(/\d(?=(\d{3})+\.)/g, "$&,")}`;
 }
 
 export function formatBalance(rawValue, decimals, significant = decimals) {
