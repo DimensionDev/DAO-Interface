@@ -70,7 +70,7 @@ export function MainTabs(props) {
         <div className="flex justify-between mb-2">
           <p className={keyTextColor}>Total supply:</p>
           <p className={valueTextColor}>
-            {formatCurrency(payload.totalSupply, 0)}
+            {formatCurrency(payload.totalSupply)}
           </p>
         </div>
         {/* <div className="flex justify-between mb-2">

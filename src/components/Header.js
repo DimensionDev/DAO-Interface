@@ -69,7 +69,7 @@ export function Header(props) {
             />
           </p>
           <p className={`${mode === "dark" ? "text-gray-100" : ""}`}>
-            {formatCurrency(Math.ceil(formatBalance(payload.totalPaid, 18)), 0)}
+            {formatCurrency(Math.ceil(formatBalance(payload.totalPaid, 18)))}
           </p>
 
           <p
@@ -80,8 +80,7 @@ export function Header(props) {
             {usdRate
               ? "$" +
                 formatCurrency(
-                  Math.ceil(formatBalance(payload.totalPaid * usdRate, 18)),
-                  0
+                  Math.ceil(formatBalance(payload.totalPaid * usdRate, 18))
                 )
               : "-"}
           </p>
@@ -105,7 +104,7 @@ export function Header(props) {
             />
           </p>
           <p className={`${mode === "dark" ? "text-gray-100" : ""}`}>
-            Ξ {formatCurrency(formatBalance(payload.currentBalance, 18), 2)}
+            Ξ {formatCurrency(formatBalance(payload.currentBalance, 18))}
           </p>
           {payload.overflow ? (
             <p
@@ -149,10 +148,7 @@ export function Header(props) {
             />
           </p>
           <p className={`${mode === "dark" ? "text-gray-100" : ""}`}>
-            {formatCurrency(
-              Math.ceil(formatBalance(payload.inWallet.jbx, 18)),
-              2
-            )}{" "}
+            {formatCurrency(Math.ceil(formatBalance(payload.inWallet.jbx, 18)))}{" "}
             JBX + Ξ{formatBalance(payload.inWallet.eth, 18)}
           </p>
           <p
