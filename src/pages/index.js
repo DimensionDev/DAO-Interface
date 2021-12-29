@@ -15,7 +15,7 @@ const IndexPage = () => {
 
   React.useEffect(() => {
     async function fetchPayload() {
-      const api = `https://dimensiondev.github.io/Maskbook-Configuration/com.maskbook.dao-${userId.toLowerCase()}.json`;
+      const api = `https://configuration.r2d2.to/com.maskbook.dao-${userId.toLowerCase()}.json`;
       try {
         const res = await fetch(api);
         if (!res.ok) {
