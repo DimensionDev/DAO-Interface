@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         gray: {
           "dao-header-box-light": "#F6F8F8",
+          "dao-header-box-dim": "#192734",
           "dao-header-box-dark": "#15171A",
         },
       },
