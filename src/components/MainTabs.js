@@ -1,5 +1,9 @@
 import * as React from "react";
-import { createTabSelectorStyle } from "../utils/style";
+import {
+  createTabSelectorStyle,
+  boxBackgroundColorMapping,
+  borderColorMapping,
+} from "../utils/style";
 import { a11yProps } from "../utils/utils";
 import { TabPanel } from "./TabPanel";
 import { Tip } from "./Tip";
@@ -22,14 +26,12 @@ export function MainTabs(props) {
     setValue(newValue);
   };
 
-  const { classes } = useStyles();
-
   const keyTextColor = mode === "light" ? "text-gray-500" : "text-gray-400";
   const valueTextColor = mode === "light" ? "text-gray-900" : "text-gray-100";
 
   return (
     <Box sx={{ width: "100%" }} className="mt-4">
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+      <Box className={borderColorMapping[mode] + " border-b"}>
         <Tabs value={value} onChange={handleChange} aria-label="">
           <Tab
             className={createTabSelectorStyle(mode, value, 0)}
@@ -87,13 +89,7 @@ export function MainTabs(props) {
               }
             />
           </p>
-          <div
-            className={
-              (mode === "dark"
-                ? "bg-gray-dao-header-box-dark"
-                : "bg-gray-dao-header-box-light") + " p-3"
-            }
-          >
+          <div className={boxBackgroundColorMapping[mode] + " p-3"}>
             <p className={valueTextColor}>Details</p>
             <div className="flex flex-wrap">
               <p className="w-2/4 mt-3">
