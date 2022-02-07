@@ -115,9 +115,17 @@ export function Header(props) {
               }
             />
           </p>
-          <p className={`${primaryTextColorMapping[mode]}`}>
-            {formatCurrency(Math.ceil(formatBalance(payload.inWallet.jbx, 18)))}{" "}
-            JBX + Ξ{formatBalance(payload.inWallet.eth, 18)}
+          <p
+            className={`${primaryTextColorMapping[mode]} flex justify-center flex-wrap`}
+          >
+            <span>
+              {formatCurrency(
+                Math.ceil(formatBalance(payload.inWallet.jbx, 18))
+              )}{" "}
+              JBX
+            </span>{" "}
+            <span>+</span>{" "}
+            <span>Ξ{formatBalance(payload.inWallet.eth, 18)}</span>
           </p>
           <p
             className={`${subTextColorMapping[mode]} flex items-center opacity-0`}

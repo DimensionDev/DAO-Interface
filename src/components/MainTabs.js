@@ -7,7 +7,6 @@ import {
 import { a11yProps } from "../utils/utils";
 import { TabPanel } from "./TabPanel";
 import { Tip } from "./Tip";
-import { ActivityTabs, useStyles } from "./ActivityTabs";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -38,11 +37,6 @@ export function MainTabs(props) {
             label="Info"
             {...a11yProps(0)}
           />
-          {/* <Tab
-            className={createTabSelectorStyle(mode, value, 1)}
-            label="Activity"
-            {...a11yProps(1)}
-          /> */}
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -75,10 +69,6 @@ export function MainTabs(props) {
             {formatCurrency(payload.totalSupply)}
           </p>
         </div>
-        {/* <div className="flex justify-between mb-2">
-          <p className={keyTextColor}>Your balance:</p>
-          <p className={valueTextColor}>0 PEOPLE</p>
-        </div> */}
         <div>
           <p className={`${valueTextColor} flex items-center mb-2 mt-4`}>
             <span>Funding cycle</span>
