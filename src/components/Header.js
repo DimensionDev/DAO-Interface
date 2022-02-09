@@ -49,7 +49,7 @@ export function Header(props) {
       </div>
       <div className="flex justify-between w-full text-sm">
         <div
-          className={`w-36 h-28 ${boxBackgroundColor}  rounded flex flex-col items-center justify-between py-3`}
+          className={`w-36 h-28 ${boxBackgroundColor}  rounded flex flex-col items-center justify-between p-3`}
         >
           <p className={`${subTextColorMapping[mode]} flex items-center`}>
             <span>VOLUME</span>
@@ -74,7 +74,7 @@ export function Header(props) {
           </p>
         </div>
         <div
-          className={`w-40 h-28 ${boxBackgroundColor} rounded flex flex-col items-center justify-between py-3`}
+          className={`w-40 h-28 ${boxBackgroundColor} rounded flex flex-col items-center justify-between p-3`}
         >
           <p className={`${subTextColorMapping[mode]} flex items-center`}>
             <span>IN JUICEBOX</span>
@@ -104,7 +104,7 @@ export function Header(props) {
           )}
         </div>
         <div
-          className={`w-48 h-28 ${boxBackgroundColor} rounded flex flex-col items-center justify-between py-3`}
+          className={`w-48 h-28 ${boxBackgroundColor} rounded flex flex-col items-center justify-between p-3`}
         >
           <p className={`${subTextColorMapping[mode]} flex items-center`}>
             <span>IN WALLET</span>
